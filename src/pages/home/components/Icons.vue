@@ -91,22 +91,24 @@
 	.icons >>> .swiper-wrapper
 		height:0
 		padding-bottom:50%
-	.icon
-		overflow:hidden
-		height: 0
-		width:25%
-		float: left
-		padding-bottom:25%
-		text-align:center
-		display:flex
-		align-items:center
-		flex-direction: column 
-		.icon-images
-			width:1.1rem
-			height:1.1rem
-			margin:0.25rem auto 0.1rem auto
-		.icon-desc
-			color:$darkTextColor
-			height:.44rem
+	.icons
+		margin-top:.1rem
+		.icon
+			overflow:hidden
+			height: 0
+			width:25%
+			float: left
+			padding-bottom:25%
+			text-align:center
+			display:flex
+			align-items:center
+			flex-direction: column 
+			.icon-images
+				width:1.1rem
+				height:1.1rem
+				margin:0.25rem auto 0.1rem auto
+			.icon-desc
+				color:$darkTextColor
+				height:.44rem
 </style>
 

@@ -4,7 +4,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of list"
+        v-for="item of weekendList"
         :key="item.id"
       >
         <div class="item-img-wrapper">
@@ -22,21 +22,11 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props:{
+  	weekendList:Array
+  },
   data() {
     return{
-    	list: [
-		{
-			id:'001',
-			imgUrl:'http://img1.qunarzz.com/sight/source/1505/4e/3e87ee62e59cdb.jpg_r_640x214_fe6cc902.jpg',
-			title:'“最忆是杭州”- G20峰会特别版《印象西湖》',
-			desc:'这里最近很火哦，好多人都在点评它呢！'
-		},
-		{
-			id:'002',
-			imgUrl:'http://img1.qunarzz.com/sight/source/1505/9f/7d45cc38259e0.jpg_r_640x214_156f4299.jpg',
-			title:'宋城千古情',
-			desc:'这里最近很火哦，好多人都在点评它呢111111！'
-		}]
     }
   }
 }

@@ -2,7 +2,7 @@
 	<div>
 		<div class="title">热销推荐</div>
 		<ul>
-			<li class="item border-bottom" v-for="item in recommend" key="item.id">
+			<li class="item border-bottom" v-for="(item,index) in recommendList" :key="item.id">
 				<img :src="item.imgUrl" class="item-img"/>
 				<div class="item-info">
 					<p class="item-title">{{item.title}}</p>
@@ -17,21 +17,11 @@
 <script>
 	export default{
 		name:'HomeRecommend',
+		props:{
+			recommendList: Array
+		},
 		data(){
 			return{
-				recommend:[
-				{
-					id:'001',
-					imgUrl:'http://img1.qunarzz.com/sight/p0/1709/28/288fbeccc335f774a3.img.jpg_200x200_4a81bde9.jpg',
-					title:'“最忆是杭州”- G20峰会特别版《印象西湖》',
-					desc:'这里最近很火哦，好多人都在点评它呢！'
-				},
-				{
-					id:'002',
-					imgUrl:'http://img1.qunarzz.com/sight/p0/1412/be/c788f0f3767d2ea037b9b66d2010bfa4.water.jpg_200x200_ead93bcd.jpg',
-					title:'宋城千古情',
-					desc:'这里最近很火哦，好多人都在点评它呢111111！'
-				}]
 			}
 		}
 	}

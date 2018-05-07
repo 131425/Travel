@@ -1,13 +1,18 @@
 <template>
 	<div class="header">
 		城市选择
-		<span class="iconfont header-back">&#xe624;</span>
+		<span class="iconfont header-back" @click="handleBack">&#xe624;</span>
 	</div>
 </template>
 
 <script>
 	export default{
-		name:'City'
+		name:'City',
+		methods:{
+			handleBack(){
+				this.$router.go(-1);
+			}
+		}
 	}
 </script>
 

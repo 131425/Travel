@@ -9,19 +9,26 @@
 		</div>
 		<router-link to="/city" tag="div">
 			<div class="header-right">
-				<span>{{city}}</span>
+				<span>{{this.handleCities}}</span>
 				<span class="iconfont">&#xe600;</span>
 			</div>
 		</router-link>
 	</div>
 </template>
 
-<script>export default {
-	name: 'Header',
-	props:{
-		city: String
+<script>
+	import { mapState, mapGetters } from 'vuex';
+	export default {
+		name: 'Header',
+		computed:{
+			...mapState(['city']),
+			...mapGetters(['handleCities'])
+//			...mapState({  
+//				city1: 'city'
+//			})
+		}
 	}
-}</script>
+</script>
 
 <style lang="stylus" scoped>
 	@import '../../../assets/styles/varibles.styl'
@@ -44,6 +51,7 @@
 			line-height:0.64rem
 			padding:0 0.2rem
 		.header-right
-			width:1.24rem
+			min-width:1.24rem
+			padding:0 .1rem
 			text-align:center
 </style>

@@ -4,9 +4,18 @@
 		
 		<city-search></city-search>
 		
-		<city-list></city-list>
+		<!--城市列表-->
+		<city-list
+			:cities = "cities"
+			:hot = "hotCities"
+			:letter = "letter"
+		></city-list>
 		
-		<city-alphabet></city-alphabet>
+		<!--字母表-->
+		<city-alphabet 
+			:cities = "cities"
+			@changeCity="handleChangeCity"
+		></city-alphabet>
 	</div>
 </template>
 
@@ -15,6 +24,7 @@
 	import CitySearch from './components/Search'
 	import CityList from './components/CityList'
 	import CityAlphabet from './components/Alphabet'
+	import axios  from 'axios'
 	export default{
 		name:'City',
 		components:{
@@ -22,6 +32,33 @@
 			CitySearch,
 			CityList,
 			CityAlphabet
+		},
+		data(){
+			return{
+				cities: {},
+				hotCities: [],
+				letter:''
+			}
+		},
+		mounted(){
+			this.getCityInfo();
+		},
+		methods:{
+			getCityInfo(){
+				axios.get('/api/city.json')
+				.then(this.handleCityInfoSucc)
+			},
+			handleCityInfoSucc(res){
+				res = res.data
+				if(res.ret && res.data){
+					const data = res.data
+					this.cities = data.cities;
+					this.hotCities = data.hotCities
+				}
+			},
+			handleChangeCity(letter){
+				this.letter = letter;
+			},
 		}
 	}
 </script>

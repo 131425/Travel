@@ -55,7 +55,7 @@
 					if(index >= 0 && index < this.letters.length){
 						this.$emit('changeCity',this.letters[index]);
 					}
-				})
+				},16)
 			},
 			hanleTouchEnd(){
 				this.touchStatus = false;

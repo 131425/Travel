@@ -9,7 +9,7 @@
 			v-if="!showAbs"
 			:style="showStyle"
 		>
-				城市选择
+				景点详情
 			<router-link tag="div" to="/" class="header-back">
 				<span class="iconfont">&#xe624;</span>
 			</router-link>

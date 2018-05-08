@@ -7,7 +7,7 @@
 				class="item border-bottom" 
 				v-for="(item,index) in recommendList" 
 				:key="item.id"
-				to="/detail"
+				:to="'/detail/' + item.id"
 			>
 				<img :src="item.imgUrl" class="item-img"/>
 				<div class="item-info">

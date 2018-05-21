@@ -16,7 +16,7 @@
 	    			@click="handleChangeCity(item.name)"
 	    		>{{item.name}}</li>
 	    		<li class="search-item border-bottom" v-show="hasNoData">
-	          		有找到匹配数据
+	          		没有找到匹配数据
 	       		</li>
 	    	</ul>
 	    </div>

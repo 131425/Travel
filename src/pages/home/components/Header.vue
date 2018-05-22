@@ -3,10 +3,10 @@
 		<div class="header-left">
 			<span class="iconfont">&#xe624;</span>
 		</div>
-		<div class="header-input">
+		<router-link to="/city" tag="div" class="header-input">
 			<span class="iconfont">&#xe632;</span>
-			<span>输入城市/景点/游玩主题</span>
-		</div>
+			<span>输入城市</span>
+		</router-link>
 		<router-link to="/city" tag="div">
 			<div class="header-right">
 				<span>{{this.handleCities}}</span>

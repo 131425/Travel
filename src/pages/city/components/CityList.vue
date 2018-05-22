@@ -62,7 +62,7 @@
 		methods:{
 			handleChangeCity(value){
 //				this.$store.commit('handleCity',value);
-				this.handleCity(value);
+//				this.handleCity(value);
 				this.$router.push('/');
 			},
 			...mapMutations(['handleCity'])

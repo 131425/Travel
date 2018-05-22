@@ -1,18 +1,14 @@
 <template>
   <div class="home">
-   <!--header-->
+  	
    <home-header></home-header>
    
-   <!--swiper-->
    <home-swiper :swiperlist="listSwiper"></home-swiper>
    
-   <!--icons-->
 	 <home-icons :iconList="listIcons"></home-icons>
 	 
-	 <!--recommend-->
 	 <home-recommend :recommendList="listRecommend"></home-recommend>
 	 
-	 <!--weekend-->
 	 <home-weekend :weekendList="listWeekend"></home-weekend>
 
   </div>
